@@ -33,8 +33,6 @@ public class CDPlayerXmlConfigTest {
 	
 	private CDPlayer cdplayer;
 
-	
-	@Ignore
 	@Test
 	public void testCDPlayerNotNull() {
 		assertNotNull(cdplayer);
