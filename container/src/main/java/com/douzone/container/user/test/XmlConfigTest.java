@@ -44,7 +44,7 @@ public class XmlConfigTest {
 		// 같은 타입의 빈이 두개 이상 있으면 type으로 가져오면 Error!!!!
 		// 1. id + type
 		// 2. name + type
-		user = ac.getBean("user2", User.class);
+		user = ac.getBean("usr2", User.class);
 		System.out.println(user);
 		
 		// 2개 파라미터로 생성된 빈 가져오기1
@@ -55,10 +55,17 @@ public class XmlConfigTest {
 		user = ac.getBean("user4", User.class);
 		System.out.println(user);
 		
-		// setter를 사용한 빈 가져오기
+		// setter를 사용한 빈 가져오기1
 		user = ac.getBean("user5", User.class);
 		System.out.println(user);
 
+		// setter를 사용한 빈 가져오기2(DI)
+		user = ac.getBean("user6", User.class);
+		System.out.println(user);
+		
+		// setter를 사용한 빈 가져오기3(List Property)
+		user = ac.getBean("user7", User.class);
+		System.out.println(user);
 	}
 	
 	// XML Auto Configuration(Annotation Scanning)
