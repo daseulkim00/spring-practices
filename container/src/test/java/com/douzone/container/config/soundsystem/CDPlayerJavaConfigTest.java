@@ -41,7 +41,7 @@ package com.douzone.container.config.soundsystem;
 		@Test
 		public void testPlay() {
 			cdplayer.play();                                             //맥지원             // 윈도우지원
-			assertEquals("playing 붕붕 by 김하온" ,systemOutRule.getLog().replace("\r\n", "").replace("\n", "")); 
+			assertEquals("Playing 붕붕 by 김하온" ,systemOutRule.getLog().replace("\r\n", "").replace("\n", "")); 
 			
 		}
 	

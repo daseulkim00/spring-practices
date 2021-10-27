@@ -11,7 +11,7 @@ public class HighSchoolRapper2Final implements CompactDisct {
 	@Override
 	public void play() {
 
-		System.out.println("Playing" + title + "by" + artist);
+		System.out.println("Playing " + title + " by " + artist);
 	}
 
 }
