@@ -39,13 +39,13 @@ public class FileUploadService {
          System.out.println("##########" + saveFilename);
 
         // 이름을 만들어냄 
-         
+         ///////////////////////////////////////
          
        // 어디에저장할지 SAVE_PATH = "/upload-images" 에 저장된다.
          OutputStream os = new FileOutputStream(SAVE_PATH + "/" + saveFilename);  //  실제로 파일이 저장된경로(c드라이브)
          
          byte[] data = multipartFile.getBytes();  // 내가보낸 png파일의 바이트 배열을 받는 식
-         os.write(data);  // write-바이트 배열을 받아야 사용할ㅇ수 잇어서 위에서 맞춰준다.
+         os.write(data);  // write-바이트 배열을 받아야 사용할수 잇어서 위에서 맞춰준다.
          			      // 파일이 저장된다
          
          os.close();
@@ -71,11 +71,14 @@ public class FileUploadService {
 		 * 
 		 * Calendar calendar = Calendar.getInstance();
 		 * 
-		 * filename += calendar.get(Calendar.YEAR); filename +=
-		 * calendar.get(Calendar.MONTH); filename += calendar.get(Calendar.DATE);
-		 * filename += calendar.get(Calendar.HOUR); filename +=
-		 * calendar.get(Calendar.MINUTE); filename += calendar.get(Calendar.SECOND);
-		 * filename += calendar.get(Calendar.MILLISECOND); filename += ("." + extName);
+		 * filename += calendar.get(Calendar.YEAR); 
+		 * filename += calendar.get(Calendar.MONTH); 
+		 * filename += calendar.get(Calendar.DATE);
+		 * filename += calendar.get(Calendar.HOUR); 
+		 * filename += calendar.get(Calendar.MINUTE); 
+		 * filename += calendar.get(Calendar.SECOND);
+		 * filename += calendar.get(Calendar.MILLISECOND); 
+		 * filename += ("." + extName);
 		 * return filename;
 		 */
    }

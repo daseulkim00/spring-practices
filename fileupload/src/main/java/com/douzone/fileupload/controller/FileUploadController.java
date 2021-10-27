@@ -15,12 +15,12 @@ public class FileUploadController {
 	@Autowired
 	private FileUploadService fileUploadService;
 	
-	@RequestMapping({"", "/form"})      // "" 내가처음에 들어가는곳 
+	@RequestMapping({"", "/form"})      // fileupload뒤에 아무것도 안치거나 "/form" 으로 치면 연결
 	public String form() {
 		return "/WEB-INF/views/form.jsp";
 	}
 	
-	@RequestMapping(value="/upload", method=RequestMethod.POST)
+	@RequestMapping(value="/upload", method=RequestMethod.POST)  //form.jsp에서 action="upload"
 	public String upload(
 		@RequestParam(value="email", required=true, defaultValue="") String email,
 		@RequestParam(value="file") MultipartFile multipartFile, Model model) {
